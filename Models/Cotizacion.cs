@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QuarkIngreso.Models
 {
@@ -10,25 +7,25 @@ namespace QuarkIngreso.Models
     {
         private long id;
         private Tienda tienda;
+        private Ropa ropa;
         private DateTime fecha;
         private float total;
-        private List<Ropa> ropas;
 
         public Cotizacion() { }
 
-        public Cotizacion(long id, Tienda tienda, DateTime fecha, List<Ropa> ropas, float total)
+        public Cotizacion(long id, Tienda tienda,Ropa ropa, DateTime fecha, float total)
         {
             this.id = id;
             this.tienda = tienda;
+            this.ropa = ropa;
             this.fecha = fecha;
-            this.ropas = ropas;
             this.total = total;
         }
 
         public long Id { get => id; set => id = value; }
         public DateTime Fecha { get => fecha; set => fecha = value; }
-        public List<Ropa> Ropas { get => ropas; set => ropas = value; }
         public Tienda Tienda { get => tienda; set => tienda = value; }
+        public Ropa Ropa { get => ropa; set => ropa = value; }
         public float Total { get => total; set => total = value; }
     }
 }

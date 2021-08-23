@@ -16,5 +16,10 @@ namespace QuarkIngreso.View
         {
             InitializeComponent();
         }
+
+        private void nuevaTienda_Click(object sender, EventArgs e)
+        {
+            new NuevaTienda().Show();
+        }
     }
 }
