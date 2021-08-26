@@ -11,6 +11,7 @@ namespace QuarkIngreso
         [STAThread]
         static void Main()
         {
+            DB.InitialiceDB.checkInitializeOrInitialize();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

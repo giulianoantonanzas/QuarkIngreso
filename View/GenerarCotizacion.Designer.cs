@@ -29,19 +29,20 @@ namespace QuarkIngreso.View
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tiendasComboBox = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.nombreTiendaTXT = new System.Windows.Forms.Label();
+            this.direccionTiendaTXT = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -57,29 +58,29 @@ namespace QuarkIngreso.View
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.vendedorTiendaTXT = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // tiendasComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(6, 19);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(188, 28);
-            this.comboBox1.TabIndex = 0;
+            this.tiendasComboBox.FormattingEnabled = true;
+            this.tiendasComboBox.Location = new System.Drawing.Point(6, 19);
+            this.tiendasComboBox.Name = "tiendasComboBox";
+            this.tiendasComboBox.Size = new System.Drawing.Size(188, 28);
+            this.tiendasComboBox.TabIndex = 0;
+            this.tiendasComboBox.SelectedIndexChanged += new System.EventHandler(this.tiendasComboBox_SelectedIndexChanged);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.groupBox4);
-            this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(12, 208);
@@ -109,48 +110,17 @@ namespace QuarkIngreso.View
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.checkBox2);
+            this.groupBox4.Controls.Add(this.checkBox1);
+            this.groupBox4.Controls.Add(this.radioButton1);
             this.groupBox4.Controls.Add(this.checkBox3);
             this.groupBox4.Controls.Add(this.radioButton2);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(9, 72);
+            this.groupBox4.Location = new System.Drawing.Point(6, 28);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(501, 40);
+            this.groupBox4.Size = new System.Drawing.Size(504, 70);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(206, 11);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(73, 22);
-            this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "Chupin";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(6, 11);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(84, 22);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Pantalón";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.checkBox2);
-            this.groupBox3.Controls.Add(this.checkBox1);
-            this.groupBox3.Controls.Add(this.radioButton1);
-            this.groupBox3.Location = new System.Drawing.Point(9, 25);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(501, 40);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
             // 
             // checkBox2
             // 
@@ -159,7 +129,7 @@ namespace QuarkIngreso.View
             this.checkBox2.Location = new System.Drawing.Point(353, 13);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(129, 22);
-            this.checkBox2.TabIndex = 2;
+            this.checkBox2.TabIndex = 5;
             this.checkBox2.Text = "Mangas Cortas";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
@@ -170,7 +140,7 @@ namespace QuarkIngreso.View
             this.checkBox1.Location = new System.Drawing.Point(206, 13);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(129, 22);
-            this.checkBox1.TabIndex = 1;
+            this.checkBox1.TabIndex = 4;
             this.checkBox1.Text = "Mangas Cortas";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
@@ -181,10 +151,33 @@ namespace QuarkIngreso.View
             this.radioButton1.Location = new System.Drawing.Point(6, 11);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(77, 22);
-            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabIndex = 3;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Camisa";
             this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox3.Location = new System.Drawing.Point(206, 39);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(73, 22);
+            this.checkBox3.TabIndex = 2;
+            this.checkBox3.Text = "Chupin";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Location = new System.Drawing.Point(6, 39);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(84, 22);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Pantalón";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -199,9 +192,12 @@ namespace QuarkIngreso.View
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.vendedorTiendaTXT);
+            this.groupBox2.Controls.Add(this.nombreTiendaTXT);
+            this.groupBox2.Controls.Add(this.direccionTiendaTXT);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.tiendasComboBox);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
@@ -211,6 +207,22 @@ namespace QuarkIngreso.View
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tienda";
+            // 
+            // nombreTiendaTXT
+            // 
+            this.nombreTiendaTXT.AutoSize = true;
+            this.nombreTiendaTXT.Location = new System.Drawing.Point(301, 59);
+            this.nombreTiendaTXT.Name = "nombreTiendaTXT";
+            this.nombreTiendaTXT.Size = new System.Drawing.Size(0, 20);
+            this.nombreTiendaTXT.TabIndex = 8;
+            // 
+            // direccionTiendaTXT
+            // 
+            this.direccionTiendaTXT.AutoSize = true;
+            this.direccionTiendaTXT.Location = new System.Drawing.Point(313, 22);
+            this.direccionTiendaTXT.Name = "direccionTiendaTXT";
+            this.direccionTiendaTXT.Size = new System.Drawing.Size(0, 20);
+            this.direccionTiendaTXT.TabIndex = 7;
             // 
             // label3
             // 
@@ -374,6 +386,14 @@ namespace QuarkIngreso.View
             this.button1.Text = "Cotizar";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // vendedorTiendaTXT
+            // 
+            this.vendedorTiendaTXT.AutoSize = true;
+            this.vendedorTiendaTXT.Location = new System.Drawing.Point(86, 59);
+            this.vendedorTiendaTXT.Name = "vendedorTiendaTXT";
+            this.vendedorTiendaTXT.Size = new System.Drawing.Size(0, 20);
+            this.vendedorTiendaTXT.TabIndex = 9;
+            // 
             // GenerarCotizacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -389,12 +409,11 @@ namespace QuarkIngreso.View
             this.Controls.Add(this.groupBox1);
             this.Name = "GenerarCotizacion";
             this.Text = "Cotizador Express";
+            this.Load += new System.EventHandler(this.GenerarCotizacion_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -410,18 +429,14 @@ namespace QuarkIngreso.View
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox tiendasComboBox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -438,5 +453,11 @@ namespace QuarkIngreso.View
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label nombreTiendaTXT;
+        private System.Windows.Forms.Label direccionTiendaTXT;
+        private System.Windows.Forms.Label vendedorTiendaTXT;
     }
 }

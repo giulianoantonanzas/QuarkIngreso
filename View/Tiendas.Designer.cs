@@ -1,4 +1,10 @@
 ﻿
+using QuarkIngreso.Controller;
+using QuarkIngreso.Models;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
+
 namespace QuarkIngreso.View
 {
     partial class Tiendas
@@ -48,10 +54,10 @@ namespace QuarkIngreso.View
             this.nombre,
             this.direccion,
             this.vendedor});
-            this.tablaTiendas.Location = new System.Drawing.Point(7, 21);
+            this.tablaTiendas.Location = new System.Drawing.Point(7, 12);
             this.tablaTiendas.Name = "tablaTiendas";
             this.tablaTiendas.ReadOnly = true;
-            this.tablaTiendas.Size = new System.Drawing.Size(444, 257);
+            this.tablaTiendas.Size = new System.Drawing.Size(444, 266);
             this.tablaTiendas.TabIndex = 2;
             // 
             // id
@@ -105,6 +111,7 @@ namespace QuarkIngreso.View
             this.Controls.Add(this.tablaTiendas);
             this.Name = "Tiendas";
             this.Text = "Tiendas";
+            this.Load += new System.EventHandler(this.Tiendas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaTiendas)).EndInit();
             this.ResumeLayout(false);
 

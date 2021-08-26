@@ -1,9 +1,9 @@
-﻿using QuarkIngreso.Models;
-using System;
+﻿using QuarkIngreso.Constants;
+using QuarkIngreso.Models;
 using System.IO;
 using System.Reflection;
 
-namespace Database
+namespace DB
 {
     /// <summary>Inicializara la base de datos de Vendedor, Cotizaciones y Ropas</summary>
     public static class InitialiceDB
@@ -12,11 +12,7 @@ namespace Database
         /// <summary>si ya estaba inicializado alguno de los archivos de la base de datos no genera nuevos archivos. En todo caso, los crea</summary>
         public static void checkInitializeOrInitialize()
         {
-            try
-            {
-                File.ReadAllText("Vendedores.txt");
-            }
-            catch(Exception)
+            if (!File.Exists(fileName.vendedor))
             {
                 initialiceVendedor();
                 initialiceCotizacion();
@@ -25,17 +21,16 @@ namespace Database
         }
         public static void initialiceVendedor()
         {
-            File.WriteAllText("Vendedores.txt", keyGenerate(typeof(Cotizacion).GetProperties()));
+            File.WriteAllText(fileName.vendedor, keyGenerate(typeof(Vendedor).GetProperties()));
         }
         public static void initialiceCotizacion()
         {
-            PropertyInfo[] keys = typeof(Cotizacion).GetProperties();
-            File.WriteAllText("Cotizacion.txt", keyGenerate(typeof(Cotizacion).GetProperties()));
+            File.WriteAllText(fileName.cotizacion, keyGenerate(typeof(Cotizacion).GetProperties()));
         }
 
         public static void initialiceTienda()
         {
-            File.WriteAllText("Tiendas.txt", keyGenerate(typeof(Tienda).GetProperties()));
+            File.WriteAllText(fileName.tienda, keyGenerate(typeof(Tienda).GetProperties()));
         }
         public static string keyGenerate(PropertyInfo[] keys)
         {

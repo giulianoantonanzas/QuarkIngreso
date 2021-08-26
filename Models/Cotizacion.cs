@@ -13,7 +13,7 @@ namespace QuarkIngreso.Models
 
         public Cotizacion() { }
 
-        public Cotizacion(long id, Tienda tienda,Ropa ropa, DateTime fecha, float total)
+        public Cotizacion(long id, DateTime fecha, Tienda tienda, Ropa ropa, float total)
         {
             this.id = id;
             this.tienda = tienda;
