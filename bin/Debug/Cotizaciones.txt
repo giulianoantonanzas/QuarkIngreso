@@ -1,0 +1,2 @@
+Id	Fecha	Tienda	Ropa	PrendasCotizadas	Total	
+41241	27/08/2021	1	Camisa - mangas cortas - cuello mao - standar - 3500 - 100 - 	100	324450	

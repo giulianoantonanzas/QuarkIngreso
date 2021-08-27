@@ -1,0 +1,16 @@
+C:\Users\USUARIO\source\repos\QuarkIngreso\bin\Debug\QuarkIngreso.exe.config
+C:\Users\USUARIO\source\repos\QuarkIngreso\bin\Debug\QuarkIngreso.exe
+C:\Users\USUARIO\source\repos\QuarkIngreso\bin\Debug\QuarkIngreso.pdb
+C:\Users\USUARIO\source\repos\QuarkIngreso\obj\Debug\QuarkIngreso.Form1.resources
+C:\Users\USUARIO\source\repos\QuarkIngreso\obj\Debug\QuarkIngreso.Properties.Resources.resources
+C:\Users\USUARIO\source\repos\QuarkIngreso\obj\Debug\QuarkIngreso.csproj.GenerateResource.cache
+C:\Users\USUARIO\source\repos\QuarkIngreso\obj\Debug\QuarkIngreso.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\source\repos\QuarkIngreso\obj\Debug\QuarkIngreso.exe
+C:\Users\USUARIO\source\repos\QuarkIngreso\obj\Debug\QuarkIngreso.pdb
+C:\Users\USUARIO\source\repos\QuarkIngreso\obj\Debug\QuarkIngreso.View.Cotizaciones.resources
+C:\Users\USUARIO\source\repos\QuarkIngreso\obj\Debug\QuarkIngreso.View.GenerarCotizacion.resources
+C:\Users\USUARIO\source\repos\QuarkIngreso\obj\Debug\QuarkIngreso.View.NuevaTienda.resources
+C:\Users\USUARIO\source\repos\QuarkIngreso\obj\Debug\QuarkIngreso.View.NuevoVendedor.resources
+C:\Users\USUARIO\source\repos\QuarkIngreso\obj\Debug\QuarkIngreso.View.Tiendas.resources
+C:\Users\USUARIO\source\repos\QuarkIngreso\obj\Debug\QuarkIngreso.View.Vendedores.resources
+C:\Users\USUARIO\source\repos\QuarkIngreso\obj\Debug\QuarkIngreso.csproj.AssemblyReference.cache
