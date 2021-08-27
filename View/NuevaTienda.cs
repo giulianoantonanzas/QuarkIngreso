@@ -10,11 +10,14 @@ namespace QuarkIngreso.View
     {
         VendedorController vendedorController;
         TiendaController tiendaController;
+        List<Vendedor> vendedores;
 
         public NuevaTienda()
         {
             vendedorController = new VendedorController();
             tiendaController = new TiendaController();
+            vendedores = new List<Vendedor>();
+            vendedores = vendedorController.GetVendedores();
             InitializeComponent();
         }
 
@@ -22,18 +25,26 @@ namespace QuarkIngreso.View
         {
             try
             {
-                int id = int.Parse(idBox.Text);
-                string nombre = nombreBox.Text;
-                string direccion = direccionBox.Text;
-                string idVendedor = vendedoresComboBox.Text.Split(' ')[0];
-                tiendaController.SetTienda(
-                    new Tienda(id, nombre, direccion,
-                    tiendaController.FindVendedorById(idVendedor)));
-                this.Close();
+                if(idBox.Text!="" && nombreBox.Text!="" && direccionBox.Text!="" && vendedoresComboBox.Text != "")
+                {
+                    int id = int.Parse(idBox.Text);
+                    string nombre = nombreBox.Text;
+                    string direccion = direccionBox.Text;
+                    Vendedor vendedorSeleccionado = vendedores[vendedoresComboBox.SelectedIndex];
+                    string idVendedor = vendedoresComboBox.Text.Split(' ')[0];
+                    tiendaController.SetTienda(new Tienda(id, nombre, direccion, vendedorSeleccionado));
+                    Close();
+                    new Tiendas().Show();
+                }
+                else
+                {
+                    MessageBox.Show("Rellene los campos correctamente", "Error al registrar la tienda",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception exepcion)
             {
-                MessageBox.Show(exepcion.Message, "Error al registrar la tienda",
+                MessageBox.Show("Ingrese bien los datos y corrobore que el vendedor exista. Detalle: "+exepcion.Message, "Error al registrar la tienda",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
@@ -46,8 +57,6 @@ namespace QuarkIngreso.View
 
         private void NuevaTienda_Load(object sender, EventArgs e)
         {
-            List<Vendedor> vendedores = vendedorController.GetVendedores();
-
             foreach (Vendedor vendedor in vendedores)
                 vendedoresComboBox.Items.Add(vendedor.Id + " " + vendedor.Nombre + " " + vendedor.Apellido);
         }

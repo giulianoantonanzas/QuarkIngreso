@@ -25,13 +25,21 @@ namespace QuarkIngreso.View
         {
             try
             {
-                
-                int id = int.Parse(idBox.Text);
-                string nombre = nombreBox.Text;
-                string apellido = apellidoBox.Text;
-                vendedorController.SetTienda(new Vendedor(id, nombre, apellido));
-                new Tiendas().Show();
-                Close();
+                if(idBox.Text !="" && nombreBox.Text!="" && apellidoBox.Text != "")
+                {
+                    int id = int.Parse(idBox.Text);
+                    string nombre = nombreBox.Text;
+                    string apellido = apellidoBox.Text;
+                    vendedorController.SetTienda(new Vendedor(id, nombre, apellido));
+                    new Vendedores().Show();
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Rellene los campos correctamente", "Error al registrar el vendedor",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
             catch (Exception exepcion)
             {

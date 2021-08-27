@@ -8,7 +8,7 @@ namespace QuarkIngreso.Controller
     public class TiendaController
     {
         private List<Tienda> tiendas;
-        protected string file = fileName.tienda;
+        protected string file = FileName.tienda;
         protected string tiendasTXT;
 
         public TiendaController() {
@@ -44,7 +44,7 @@ namespace QuarkIngreso.Controller
 
         public Vendedor FindVendedorById(string id)
         {
-            string vendedorTXT = File.ReadAllText(fileName.vendedor);
+            string vendedorTXT = File.ReadAllText(FileName.vendedor);
             string[] vendedores = vendedorTXT.Split('\n');
             for (int i = 1; i < vendedores.Length - 1; i++)
             {

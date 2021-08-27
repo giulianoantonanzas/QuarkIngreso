@@ -7,7 +7,7 @@ namespace QuarkIngreso.Controller
 {
     public class VendedorController
     {
-        protected string file= fileName.vendedor;
+        protected string file= FileName.vendedor;
         private List<Vendedor> vendedores;
         protected string vendedoresTXT;
         public VendedorController() {

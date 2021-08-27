@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace QuarkIngreso.Models
+﻿namespace QuarkIngreso.Models
 {
     public abstract class Ropa
     {
@@ -13,9 +11,13 @@ namespace QuarkIngreso.Models
         public float PrecioUnitario { get => precioUnitario; set => precioUnitario = value; }
         public int Stock { get => stock; set => stock = value; }
 
+        public abstract string IsCotizable();
+
         public abstract override string ToString();
 
         public abstract string[] ropaHeaders();
+
+        public abstract void RopaCotizadaRefreshInRule();
 
     }
 }

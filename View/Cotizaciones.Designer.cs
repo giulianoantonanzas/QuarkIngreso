@@ -31,12 +31,15 @@ namespace QuarkIngreso.View
         {
             this.generarCotizacion = new System.Windows.Forms.Button();
             this.tablaCotizacion = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tienda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prenda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detalles = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.calidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioUnidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prendasCotizadas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tablaCotizacion)).BeginInit();
             this.SuspendLayout();
@@ -46,9 +49,9 @@ namespace QuarkIngreso.View
             this.generarCotizacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(43)))), ((int)(((byte)(174)))));
             this.generarCotizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generarCotizacion.ForeColor = System.Drawing.Color.White;
-            this.generarCotizacion.Location = new System.Drawing.Point(4, 334);
+            this.generarCotizacion.Location = new System.Drawing.Point(4, 435);
             this.generarCotizacion.Name = "generarCotizacion";
-            this.generarCotizacion.Size = new System.Drawing.Size(894, 39);
+            this.generarCotizacion.Size = new System.Drawing.Size(1187, 39);
             this.generarCotizacion.TabIndex = 0;
             this.generarCotizacion.Text = "Generar nueva cotización";
             this.generarCotizacion.UseVisualStyleBackColor = false;
@@ -60,18 +63,35 @@ namespace QuarkIngreso.View
             this.tablaCotizacion.AllowUserToDeleteRows = false;
             this.tablaCotizacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tablaCotizacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.fecha,
             this.tienda,
             this.prenda,
             this.detalles,
             this.calidad,
             this.stock,
             this.precioUnidad,
+            this.prendasCotizadas,
             this.total});
             this.tablaCotizacion.Location = new System.Drawing.Point(4, 16);
             this.tablaCotizacion.Name = "tablaCotizacion";
             this.tablaCotizacion.ReadOnly = true;
-            this.tablaCotizacion.Size = new System.Drawing.Size(894, 312);
+            this.tablaCotizacion.Size = new System.Drawing.Size(1187, 413);
             this.tablaCotizacion.TabIndex = 1;
+            // 
+            // id
+            // 
+            this.id.Frozen = true;
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // fecha
+            // 
+            this.fecha.Frozen = true;
+            this.fecha.HeaderText = "Fecha";
+            this.fecha.Name = "fecha";
+            this.fecha.ReadOnly = true;
             // 
             // tienda
             // 
@@ -119,6 +139,13 @@ namespace QuarkIngreso.View
             this.precioUnidad.Name = "precioUnidad";
             this.precioUnidad.ReadOnly = true;
             // 
+            // prendasCotizadas
+            // 
+            this.prendasCotizadas.Frozen = true;
+            this.prendasCotizadas.HeaderText = "Cantidad Cotizadas";
+            this.prendasCotizadas.Name = "prendasCotizadas";
+            this.prendasCotizadas.ReadOnly = true;
+            // 
             // total
             // 
             this.total.Frozen = true;
@@ -131,7 +158,7 @@ namespace QuarkIngreso.View
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(902, 379);
+            this.ClientSize = new System.Drawing.Size(1196, 480);
             this.Controls.Add(this.tablaCotizacion);
             this.Controls.Add(this.generarCotizacion);
             this.Name = "Cotizaciones";
@@ -146,12 +173,15 @@ namespace QuarkIngreso.View
 
         private System.Windows.Forms.Button generarCotizacion;
         private System.Windows.Forms.DataGridView tablaCotizacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn tienda;
         private System.Windows.Forms.DataGridViewTextBoxColumn prenda;
         private System.Windows.Forms.DataGridViewTextBoxColumn detalles;
         private System.Windows.Forms.DataGridViewTextBoxColumn calidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn stock;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioUnidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prendasCotizadas;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
     }
 }

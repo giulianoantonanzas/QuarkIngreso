@@ -1,4 +1,5 @@
 ﻿using QuarkIngreso.Constants;
+using QuarkIngreso.Helpers;
 using QuarkIngreso.Models;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace QuarkIngreso.Controller
     class CotizacionController
     {
         private List<Cotizacion> cotizaciones;
-        protected string file = fileName.cotizacion;
+        protected string file = FileName.cotizacion;
         protected string cotizacionesTXT;
 
         public CotizacionController() {
@@ -26,32 +27,50 @@ namespace QuarkIngreso.Controller
                 {
                     string[] cotizacionesValues = cotizaciones[i].Split('\t');
                     Tienda tienda=FindTiendaById(cotizacionesValues[2]);
-                    Ropa ropa = StringToRopa(cotizacionesValues[3]);
+                    Ropa ropa = FileStringToRopa(cotizacionesValues[3]);
                     this.cotizaciones.Add(new Cotizacion(long.Parse(cotizacionesValues[0]),
                        DateTime.Parse(cotizacionesValues[1]),
                        tienda,
                        ropa,
-                       float.Parse(cotizacionesValues[4])));
+                       int.Parse(cotizacionesValues[4]),
+                       float.Parse(cotizacionesValues[5])));
                 }
             }
             return this.cotizaciones;
         }
 
-        public void SetCotizacion(Cotizacion cotizacion)
+        public string Cotizar(Cotizacion cotizacion)
         {
-            using (StreamWriter myFile = File.AppendText(file))
+            RefreshRules.Refresh();
+            string IsCotizableMessage = cotizacion.Ropa.IsCotizable();
+
+            if (IsCotizableMessage == Mensaje.seCotizo)
             {
-                myFile.WriteLine(cotizacion.Id + "\t" +
-                    cotizacion.Tienda.Id+ "\t" +
-                    cotizacion.Fecha.ToString("dd/MM/yyyy") + "\t"+
-                    cotizacion.Ropa.ToString() + "\t" +
-                    cotizacion.Total + "\t");
+                SaveToFile(cotizacion);
+                return IsCotizableMessage;
+            }
+            return IsCotizableMessage;
+        }
+
+        public void SaveToFile(Cotizacion cotizacion)
+        {
+            //new RopaCotizadaController();
+            {
+                using (StreamWriter myFile = File.AppendText(file))
+                {
+                    myFile.WriteLine(cotizacion.Id + "\t" +
+                        cotizacion.Fecha.ToString("dd/MM/yyyy") + "\t" +
+                        cotizacion.Tienda.Id + "\t" +
+                        cotizacion.Ropa.ToString() + "\t" +
+                        cotizacion.PrendasCotizadas + "\t" +
+                        cotizacion.Total + "\t");
+                }
             }
         }
 
         public Tienda FindTiendaById(string id)
         {
-            string tiendaTXT = File.ReadAllText(fileName.tienda);
+            string tiendaTXT = File.ReadAllText(FileName.tienda);
             string[] tiendas = tiendaTXT.Split('\n');
             for (int i = 1; i < tiendas.Length - 1; i++)
             {
@@ -68,13 +87,13 @@ namespace QuarkIngreso.Controller
             return null;
         }
 
-        public Ropa StringToRopa(string ropa)
+        public Ropa FileStringToRopa(string ropa)
         {
             string calida;
             float precioUnitario;
             int stock;
 
-            string[] separatingStrings = {" - "};
+            string[] separatingStrings = { " - " };
             string[] ropaDetails = ropa.Split(separatingStrings, StringSplitOptions.None);
             ;
             if (ropaDetails[0] == "Camisa")
@@ -82,9 +101,9 @@ namespace QuarkIngreso.Controller
                 calida = ropaDetails[3];
                 precioUnitario = float.Parse(ropaDetails[4]);
                 stock = int.Parse(ropaDetails[5]);
-                bool mangasLargas = ropaDetails[1] == "mangas largas";
-                bool cuelloMao = ropaDetails[2] == "cuello mao";                
-                return new Camisa(mangasLargas,cuelloMao,calida,precioUnitario,stock);
+                bool mangasLargas = ropaDetails[1] != "mangas largas";
+                bool cuelloMao = ropaDetails[2] == "cuello mao";
+                return new Camisa(mangasLargas, cuelloMao, calida, precioUnitario, stock);
             }
             else
             {
@@ -94,6 +113,17 @@ namespace QuarkIngreso.Controller
                 bool chupin = ropaDetails[1] == "chupin";
                 return new Pantalon(chupin, calida, precioUnitario, stock);
             }
+        }
+
+        public List<Ropa> GetRopasCotizada()
+        {
+            cotizaciones = GetCotizaciones();
+            List<Ropa> ropas =new List<Ropa>();
+            foreach (Cotizacion cotizacion in cotizaciones)
+            {
+                ropas.Add(cotizacion.Ropa);
+            }
+            return ropas;
         }
     }
 }
