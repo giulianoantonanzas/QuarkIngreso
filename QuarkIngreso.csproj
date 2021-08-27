@@ -61,9 +61,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants\PantalonRules.cs" />
+    <Compile Include="Constants\Constants.cs" />
+    <Compile Include="Constants\CamisaRules.cs" />
+    <Compile Include="Controller\CotizacionController.cs" />
     <Compile Include="Controller\TiendaController.cs" />
     <Compile Include="Controller\VendedorController.cs" />
+    <Compile Include="DB\CamisaRulesActives.cs" />
     <Compile Include="DB\Initialice.cs" />
+    <Compile Include="DB\PantalonRulesActives.cs" />
+    <Compile Include="Helpers\RefreshRules.cs" />
     <Compile Include="View\Cotizaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,7 +89,7 @@
     <Compile Include="View\inicio.Designer.cs">
       <DependentUpon>inicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Camisas.cs" />
+    <Compile Include="Models\Camisa.cs" />
     <Compile Include="Models\Cotizacion.cs" />
     <Compile Include="Models\Pantalon.cs" />
     <Compile Include="Models\Ropa.cs" />

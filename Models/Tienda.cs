@@ -14,7 +14,7 @@ namespace QuarkIngreso.Models
             vendedor = new Vendedor();
         }
 
-        public Tienda(long id, string nombre, Vendedor vendedor, string direccion)
+        public Tienda(long id, string nombre, string direccion, Vendedor vendedor)
         {
             this.id = id;
             this.nombre = nombre;
@@ -23,8 +23,8 @@ namespace QuarkIngreso.Models
         }
 
         public long Id { get => id; set => id = value; }
-        public string Direccion { get => direccion; set => direccion = value; }
         public string Nombre { get => nombre; set => nombre = value; }
+        public string Direccion { get => direccion; set => direccion = value; }
         public Vendedor Vendedor { get => vendedor; set => vendedor = value; }
     }
 }

@@ -29,73 +29,77 @@ namespace QuarkIngreso.View
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tiendasComboBox = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.stockTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.cuelloMaoCheckBox = new System.Windows.Forms.CheckBox();
+            this.mangasCortasCheckBox = new System.Windows.Forms.CheckBox();
+            this.camisaRadioBTN = new System.Windows.Forms.RadioButton();
+            this.chupinCheckBox = new System.Windows.Forms.CheckBox();
+            this.pantalonRadioBTN = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.vendedorTiendaTXT = new System.Windows.Forms.Label();
+            this.nombreTiendaTXT = new System.Windows.Forms.Label();
+            this.direccionTiendaTXT = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.premiumRadioBTN = new System.Windows.Forms.RadioButton();
+            this.standarRadioBTN = new System.Windows.Forms.RadioButton();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.cantidadTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.precioTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.cotizacionValueTXT = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cotizarBTN = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.idTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // tiendasComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(6, 19);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(188, 28);
-            this.comboBox1.TabIndex = 0;
+            this.tiendasComboBox.FormattingEnabled = true;
+            this.tiendasComboBox.Location = new System.Drawing.Point(6, 19);
+            this.tiendasComboBox.Name = "tiendasComboBox";
+            this.tiendasComboBox.Size = new System.Drawing.Size(188, 28);
+            this.tiendasComboBox.TabIndex = 0;
+            this.tiendasComboBox.SelectedIndexChanged += new System.EventHandler(this.tiendasComboBox_SelectedIndexChanged);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.stockTextBox);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.groupBox4);
-            this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(12, 208);
+            this.groupBox1.Location = new System.Drawing.Point(12, 246);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(516, 150);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ropa";
             // 
-            // textBox1
+            // stockTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(215, 115);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(72, 24);
-            this.textBox1.TabIndex = 1;
+            this.stockTextBox.Enabled = false;
+            this.stockTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stockTextBox.Location = new System.Drawing.Point(215, 115);
+            this.stockTextBox.Name = "stockTextBox";
+            this.stockTextBox.Size = new System.Drawing.Size(72, 24);
+            this.stockTextBox.TabIndex = 1;
             // 
             // label4
             // 
@@ -109,82 +113,79 @@ namespace QuarkIngreso.View
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.checkBox3);
-            this.groupBox4.Controls.Add(this.radioButton2);
+            this.groupBox4.Controls.Add(this.cuelloMaoCheckBox);
+            this.groupBox4.Controls.Add(this.mangasCortasCheckBox);
+            this.groupBox4.Controls.Add(this.camisaRadioBTN);
+            this.groupBox4.Controls.Add(this.chupinCheckBox);
+            this.groupBox4.Controls.Add(this.pantalonRadioBTN);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(9, 72);
+            this.groupBox4.Location = new System.Drawing.Point(6, 28);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(501, 40);
+            this.groupBox4.Size = new System.Drawing.Size(504, 70);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             // 
-            // checkBox3
+            // cuelloMaoCheckBox
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(206, 11);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(73, 22);
-            this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "Chupin";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.cuelloMaoCheckBox.AutoSize = true;
+            this.cuelloMaoCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cuelloMaoCheckBox.Location = new System.Drawing.Point(353, 13);
+            this.cuelloMaoCheckBox.Name = "cuelloMaoCheckBox";
+            this.cuelloMaoCheckBox.Size = new System.Drawing.Size(103, 22);
+            this.cuelloMaoCheckBox.TabIndex = 5;
+            this.cuelloMaoCheckBox.Text = "Cuello Mao";
+            this.cuelloMaoCheckBox.UseVisualStyleBackColor = true;
+            this.cuelloMaoCheckBox.CheckedChanged += new System.EventHandler(this.cuelloMaoCheckBox_CheckedChanged);
             // 
-            // radioButton2
+            // mangasCortasCheckBox
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(6, 11);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(84, 22);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Pantalón";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.mangasCortasCheckBox.AutoSize = true;
+            this.mangasCortasCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mangasCortasCheckBox.Location = new System.Drawing.Point(206, 13);
+            this.mangasCortasCheckBox.Name = "mangasCortasCheckBox";
+            this.mangasCortasCheckBox.Size = new System.Drawing.Size(129, 22);
+            this.mangasCortasCheckBox.TabIndex = 4;
+            this.mangasCortasCheckBox.Text = "Mangas Cortas";
+            this.mangasCortasCheckBox.UseVisualStyleBackColor = true;
+            this.mangasCortasCheckBox.CheckedChanged += new System.EventHandler(this.mangasCortasCheckBox_CheckedChanged);
             // 
-            // groupBox3
+            // camisaRadioBTN
             // 
-            this.groupBox3.Controls.Add(this.checkBox2);
-            this.groupBox3.Controls.Add(this.checkBox1);
-            this.groupBox3.Controls.Add(this.radioButton1);
-            this.groupBox3.Location = new System.Drawing.Point(9, 25);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(501, 40);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
+            this.camisaRadioBTN.AutoSize = true;
+            this.camisaRadioBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.camisaRadioBTN.Location = new System.Drawing.Point(6, 11);
+            this.camisaRadioBTN.Name = "camisaRadioBTN";
+            this.camisaRadioBTN.Size = new System.Drawing.Size(77, 22);
+            this.camisaRadioBTN.TabIndex = 3;
+            this.camisaRadioBTN.TabStop = true;
+            this.camisaRadioBTN.Text = "Camisa";
+            this.camisaRadioBTN.UseVisualStyleBackColor = true;
+            this.camisaRadioBTN.CheckedChanged += new System.EventHandler(this.camisaRadioBTN_CheckedChanged);
             // 
-            // checkBox2
+            // chupinCheckBox
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(353, 13);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(129, 22);
-            this.checkBox2.TabIndex = 2;
-            this.checkBox2.Text = "Mangas Cortas";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chupinCheckBox.AutoSize = true;
+            this.chupinCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chupinCheckBox.Location = new System.Drawing.Point(206, 39);
+            this.chupinCheckBox.Name = "chupinCheckBox";
+            this.chupinCheckBox.Size = new System.Drawing.Size(73, 22);
+            this.chupinCheckBox.TabIndex = 2;
+            this.chupinCheckBox.Text = "Chupin";
+            this.chupinCheckBox.UseVisualStyleBackColor = true;
+            this.chupinCheckBox.CheckedChanged += new System.EventHandler(this.chupinCheckBox_CheckedChanged);
             // 
-            // checkBox1
+            // pantalonRadioBTN
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(206, 13);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(129, 22);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "Mangas Cortas";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(6, 11);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(77, 22);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Camisa";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.pantalonRadioBTN.AutoSize = true;
+            this.pantalonRadioBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pantalonRadioBTN.Location = new System.Drawing.Point(6, 39);
+            this.pantalonRadioBTN.Name = "pantalonRadioBTN";
+            this.pantalonRadioBTN.Size = new System.Drawing.Size(84, 22);
+            this.pantalonRadioBTN.TabIndex = 1;
+            this.pantalonRadioBTN.TabStop = true;
+            this.pantalonRadioBTN.Text = "Pantalón";
+            this.pantalonRadioBTN.UseVisualStyleBackColor = true;
+            this.pantalonRadioBTN.CheckedChanged += new System.EventHandler(this.pantalonRadioBTN_CheckedChanged);
             // 
             // label2
             // 
@@ -199,18 +200,45 @@ namespace QuarkIngreso.View
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.vendedorTiendaTXT);
+            this.groupBox2.Controls.Add(this.nombreTiendaTXT);
+            this.groupBox2.Controls.Add(this.direccionTiendaTXT);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.tiendasComboBox);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(12, 103);
+            this.groupBox2.Location = new System.Drawing.Point(12, 141);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(516, 88);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tienda";
+            // 
+            // vendedorTiendaTXT
+            // 
+            this.vendedorTiendaTXT.AutoSize = true;
+            this.vendedorTiendaTXT.Location = new System.Drawing.Point(86, 59);
+            this.vendedorTiendaTXT.Name = "vendedorTiendaTXT";
+            this.vendedorTiendaTXT.Size = new System.Drawing.Size(0, 20);
+            this.vendedorTiendaTXT.TabIndex = 9;
+            // 
+            // nombreTiendaTXT
+            // 
+            this.nombreTiendaTXT.AutoSize = true;
+            this.nombreTiendaTXT.Location = new System.Drawing.Point(301, 59);
+            this.nombreTiendaTXT.Name = "nombreTiendaTXT";
+            this.nombreTiendaTXT.Size = new System.Drawing.Size(0, 20);
+            this.nombreTiendaTXT.TabIndex = 8;
+            // 
+            // direccionTiendaTXT
+            // 
+            this.direccionTiendaTXT.AutoSize = true;
+            this.direccionTiendaTXT.Location = new System.Drawing.Point(313, 22);
+            this.direccionTiendaTXT.Name = "direccionTiendaTXT";
+            this.direccionTiendaTXT.Size = new System.Drawing.Size(0, 20);
+            this.direccionTiendaTXT.TabIndex = 7;
             // 
             // label3
             // 
@@ -249,62 +277,63 @@ namespace QuarkIngreso.View
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.radioButton4);
-            this.groupBox6.Controls.Add(this.radioButton3);
+            this.groupBox6.Controls.Add(this.premiumRadioBTN);
+            this.groupBox6.Controls.Add(this.standarRadioBTN);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.ForeColor = System.Drawing.Color.White;
-            this.groupBox6.Location = new System.Drawing.Point(12, 384);
+            this.groupBox6.Location = new System.Drawing.Point(12, 422);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(212, 60);
             this.groupBox6.TabIndex = 3;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Calidad de la prenda";
             // 
-            // radioButton4
+            // premiumRadioBTN
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton4.Location = new System.Drawing.Point(92, 27);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(86, 22);
-            this.radioButton4.TabIndex = 1;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Premium";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.premiumRadioBTN.AutoSize = true;
+            this.premiumRadioBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.premiumRadioBTN.Location = new System.Drawing.Point(92, 27);
+            this.premiumRadioBTN.Name = "premiumRadioBTN";
+            this.premiumRadioBTN.Size = new System.Drawing.Size(86, 22);
+            this.premiumRadioBTN.TabIndex = 1;
+            this.premiumRadioBTN.TabStop = true;
+            this.premiumRadioBTN.Text = "Premium";
+            this.premiumRadioBTN.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // standarRadioBTN
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(9, 27);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(77, 22);
-            this.radioButton3.TabIndex = 0;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Standar";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.standarRadioBTN.AutoSize = true;
+            this.standarRadioBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.standarRadioBTN.Location = new System.Drawing.Point(9, 27);
+            this.standarRadioBTN.Name = "standarRadioBTN";
+            this.standarRadioBTN.Size = new System.Drawing.Size(77, 22);
+            this.standarRadioBTN.TabIndex = 0;
+            this.standarRadioBTN.TabStop = true;
+            this.standarRadioBTN.Text = "Standar";
+            this.standarRadioBTN.UseVisualStyleBackColor = true;
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.textBox3);
+            this.groupBox7.Controls.Add(this.cantidadTextBox);
             this.groupBox7.Controls.Add(this.label7);
-            this.groupBox7.Controls.Add(this.textBox2);
+            this.groupBox7.Controls.Add(this.precioTextBox);
             this.groupBox7.Controls.Add(this.label6);
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.ForeColor = System.Drawing.Color.White;
-            this.groupBox7.Location = new System.Drawing.Point(238, 384);
+            this.groupBox7.Location = new System.Drawing.Point(238, 422);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(290, 60);
             this.groupBox7.TabIndex = 4;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Precio unitario y cantidad";
             // 
-            // textBox3
+            // cantidadTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(224, 25);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(60, 26);
-            this.textBox3.TabIndex = 3;
+            this.cantidadTextBox.Location = new System.Drawing.Point(224, 25);
+            this.cantidadTextBox.Name = "cantidadTextBox";
+            this.cantidadTextBox.Size = new System.Drawing.Size(60, 26);
+            this.cantidadTextBox.TabIndex = 3;
+            this.cantidadTextBox.TextChanged += new System.EventHandler(this.cantidadTextBox_TextChanged);
             // 
             // label7
             // 
@@ -316,12 +345,13 @@ namespace QuarkIngreso.View
             this.label7.TabIndex = 2;
             this.label7.Text = "Cantidad";
             // 
-            // textBox2
+            // precioTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(32, 25);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(83, 26);
-            this.textBox2.TabIndex = 1;
+            this.precioTextBox.Location = new System.Drawing.Point(32, 25);
+            this.precioTextBox.Name = "precioTextBox";
+            this.precioTextBox.Size = new System.Drawing.Size(83, 26);
+            this.precioTextBox.TabIndex = 1;
+            this.precioTextBox.TextChanged += new System.EventHandler(this.precioTextBox_TextChanged);
             // 
             // label6
             // 
@@ -334,25 +364,25 @@ namespace QuarkIngreso.View
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.label9);
+            this.groupBox5.Controls.Add(this.cotizacionValueTXT);
             this.groupBox5.Controls.Add(this.label8);
-            this.groupBox5.Controls.Add(this.button1);
+            this.groupBox5.Controls.Add(this.cotizarBTN);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.ForeColor = System.Drawing.Color.White;
-            this.groupBox5.Location = new System.Drawing.Point(12, 468);
+            this.groupBox5.Location = new System.Drawing.Point(12, 506);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(510, 76);
             this.groupBox5.TabIndex = 7;
             this.groupBox5.TabStop = false;
             // 
-            // label9
+            // cotizacionValueTXT
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(224, 33);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(274, 24);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "________________________";
+            this.cotizacionValueTXT.AutoSize = true;
+            this.cotizacionValueTXT.Location = new System.Drawing.Point(224, 33);
+            this.cotizacionValueTXT.Name = "cotizacionValueTXT";
+            this.cotizacionValueTXT.Size = new System.Drawing.Size(274, 24);
+            this.cotizacionValueTXT.TabIndex = 2;
+            this.cotizacionValueTXT.Text = "________________________";
             // 
             // label8
             // 
@@ -363,16 +393,35 @@ namespace QuarkIngreso.View
             this.label8.TabIndex = 1;
             this.label8.Text = "$";
             // 
-            // button1
+            // cotizarBTN
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(43)))), ((int)(((byte)(175)))));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(9, 14);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(163, 62);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Cotizar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.cotizarBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(43)))), ((int)(((byte)(175)))));
+            this.cotizarBTN.ForeColor = System.Drawing.Color.White;
+            this.cotizarBTN.Location = new System.Drawing.Point(6, 15);
+            this.cotizarBTN.Name = "cotizarBTN";
+            this.cotizarBTN.Size = new System.Drawing.Size(147, 55);
+            this.cotizarBTN.TabIndex = 0;
+            this.cotizarBTN.Text = "Cotizar";
+            this.cotizarBTN.UseVisualStyleBackColor = false;
+            this.cotizarBTN.Click += new System.EventHandler(this.cotizarBTN_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(15, 110);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(24, 18);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "ID";
+            // 
+            // idTextBox
+            // 
+            this.idTextBox.Location = new System.Drawing.Point(45, 110);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(100, 20);
+            this.idTextBox.TabIndex = 11;
             // 
             // GenerarCotizacion
             // 
@@ -380,7 +429,9 @@ namespace QuarkIngreso.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(538, 554);
+            this.ClientSize = new System.Drawing.Size(538, 594);
+            this.Controls.Add(this.idTextBox);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
@@ -389,12 +440,11 @@ namespace QuarkIngreso.View
             this.Controls.Add(this.groupBox1);
             this.Name = "GenerarCotizacion";
             this.Text = "Cotizador Express";
+            this.Load += new System.EventHandler(this.GenerarCotizacion_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -410,33 +460,37 @@ namespace QuarkIngreso.View
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox tiendasComboBox;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton pantalonRadioBTN;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox chupinCheckBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox stockTextBox;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton premiumRadioBTN;
+        private System.Windows.Forms.RadioButton standarRadioBTN;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox cantidadTextBox;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox precioTextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label cotizacionValueTXT;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button cotizarBTN;
+        private System.Windows.Forms.CheckBox cuelloMaoCheckBox;
+        private System.Windows.Forms.CheckBox mangasCortasCheckBox;
+        private System.Windows.Forms.RadioButton camisaRadioBTN;
+        private System.Windows.Forms.Label nombreTiendaTXT;
+        private System.Windows.Forms.Label direccionTiendaTXT;
+        private System.Windows.Forms.Label vendedorTiendaTXT;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox idTextBox;
     }
 }

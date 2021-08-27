@@ -96,6 +96,7 @@ namespace QuarkIngreso.View
             this.Controls.Add(this.tablaVendedores);
             this.Name = "Vendedores";
             this.Text = "Vendedores";
+            this.Load += new System.EventHandler(this.Vendedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaVendedores)).EndInit();
             this.ResumeLayout(false);
 

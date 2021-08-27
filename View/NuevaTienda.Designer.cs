@@ -30,13 +30,13 @@ namespace QuarkIngreso.View
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.nombreBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.vendedoresComboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.direccionBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.idBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.agregar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -44,13 +44,13 @@ namespace QuarkIngreso.View
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.nombreBox);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.vendedoresComboBox);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.direccionBox);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.idBox);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
@@ -61,12 +61,12 @@ namespace QuarkIngreso.View
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informacion";
             // 
-            // textBox3
+            // nombreBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(93, 67);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(242, 26);
-            this.textBox3.TabIndex = 7;
+            this.nombreBox.Location = new System.Drawing.Point(93, 67);
+            this.nombreBox.Name = "nombreBox";
+            this.nombreBox.Size = new System.Drawing.Size(242, 26);
+            this.nombreBox.TabIndex = 7;
             // 
             // label4
             // 
@@ -77,13 +77,13 @@ namespace QuarkIngreso.View
             this.label4.TabIndex = 6;
             this.label4.Text = "Nombre";
             // 
-            // comboBox1
+            // vendedoresComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(92, 132);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(243, 28);
-            this.comboBox1.TabIndex = 5;
+            this.vendedoresComboBox.FormattingEnabled = true;
+            this.vendedoresComboBox.Location = new System.Drawing.Point(92, 132);
+            this.vendedoresComboBox.Name = "vendedoresComboBox";
+            this.vendedoresComboBox.Size = new System.Drawing.Size(243, 28);
+            this.vendedoresComboBox.TabIndex = 5;
             // 
             // label3
             // 
@@ -94,12 +94,12 @@ namespace QuarkIngreso.View
             this.label3.TabIndex = 4;
             this.label3.Text = "Vendedor";
             // 
-            // textBox2
+            // direccionBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(93, 100);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(242, 26);
-            this.textBox2.TabIndex = 3;
+            this.direccionBox.Location = new System.Drawing.Point(93, 100);
+            this.direccionBox.Name = "direccionBox";
+            this.direccionBox.Size = new System.Drawing.Size(242, 26);
+            this.direccionBox.TabIndex = 3;
             // 
             // label2
             // 
@@ -110,12 +110,12 @@ namespace QuarkIngreso.View
             this.label2.TabIndex = 2;
             this.label2.Text = "Direccion";
             // 
-            // textBox1
+            // idBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(38, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(48, 26);
-            this.textBox1.TabIndex = 1;
+            this.idBox.Location = new System.Drawing.Point(38, 32);
+            this.idBox.Name = "idBox";
+            this.idBox.Size = new System.Drawing.Size(48, 26);
+            this.idBox.TabIndex = 1;
             // 
             // label1
             // 
@@ -137,6 +137,7 @@ namespace QuarkIngreso.View
             this.agregar.TabIndex = 1;
             this.agregar.Text = "Agregar";
             this.agregar.UseVisualStyleBackColor = false;
+            this.agregar.Click += new System.EventHandler(this.agregar_Click);
             // 
             // NuevaTienda
             // 
@@ -148,6 +149,7 @@ namespace QuarkIngreso.View
             this.Controls.Add(this.groupBox1);
             this.Name = "NuevaTienda";
             this.Text = "Nueva Tienda";
+            this.Load += new System.EventHandler(this.NuevaTienda_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -158,13 +160,13 @@ namespace QuarkIngreso.View
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox direccionBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox idBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button agregar;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox nombreBox;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox vendedoresComboBox;
     }
 }
