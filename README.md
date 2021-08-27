@@ -1,6 +1,6 @@
 # QuarkIngreso
 
-<h3>Programa de ingreso para QuarkAcademy.<h3>
+<h3>Programa de ingreso para QuarkAcademy.</h3>
 
 Este reto me motivo mucho. Estuve durante una semana creando el programa para tratar de hacerlo lo mejor posible.
 Lo cierto es que uno nunca deja de querer agregarle cosas o mejorarlo.
