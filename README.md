@@ -20,8 +20,7 @@ Algo a aclarar, no utilice ningún nada en especial, puro c#, así que no habrí
 
 Como lo pensé?
 
-Al comienzo, pensé que lo mejor era guardar los datos y que se mantenga. Asi que cree el modelado de clases y luego cree la lógica para que estos se guarden y se obtengan de un archivo de texto.
-Lamentablemente, la lógica de obtención de datos e inserción, están hecha con el modelado de MVC, pero esa es una parte que no piden, así que no veo problema con que deje la lógica. Aun así, si hay algún problema se puede sacar y directamente meter "datos ficticios".
+Al comienzo, pensé que lo mejor era guardar los datos y que se mantenga. Asi que cree el modelado de clases y luego cree la lógica para que estos se guarden y se obtengan de un archivo de texto. Toda esa logica esta dividida en entre la carpeta Controller , DB , Constants y Helpers.
 
 Luego de hacer la lógica datos,<b> hice las vistas de:</b>
 <ul>
