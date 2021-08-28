@@ -299,6 +299,7 @@ namespace QuarkIngreso.View
             this.premiumRadioBTN.TabStop = true;
             this.premiumRadioBTN.Text = "Premium";
             this.premiumRadioBTN.UseVisualStyleBackColor = true;
+            this.premiumRadioBTN.CheckedChanged += new System.EventHandler(this.premiumRadioBTN_CheckedChanged);
             // 
             // standarRadioBTN
             // 
@@ -311,6 +312,7 @@ namespace QuarkIngreso.View
             this.standarRadioBTN.TabStop = true;
             this.standarRadioBTN.Text = "Standar";
             this.standarRadioBTN.UseVisualStyleBackColor = true;
+            this.standarRadioBTN.CheckedChanged += new System.EventHandler(this.standarRadioBTN_CheckedChanged);
             // 
             // groupBox7
             // 

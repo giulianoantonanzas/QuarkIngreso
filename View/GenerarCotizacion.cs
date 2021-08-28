@@ -156,5 +156,15 @@ namespace QuarkIngreso.View
             RefreshCotizacionValue();
             stockTextBox.Text= cantidadTextBox.Text;
         }
+
+        private void premiumRadioBTN_CheckedChanged(object sender, EventArgs e)
+        {
+            RefreshCotizacionValue();
+        }
+
+        private void standarRadioBTN_CheckedChanged(object sender, EventArgs e)
+        {
+            RefreshCotizacionValue();
+        }
     }
 }
