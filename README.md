@@ -36,4 +36,4 @@ Luego de hacer la lógica datos,<b> hice las vistas de:</b>
 Genere unos archivos estáticos que me sirvieron para calcular las los faltantes de las prendas cotizadas. Ósea, si yo compre 100 camisas y el máximo es de 1000; este se actualice a 900.
 Luego termine de realizar la lógica para que se pueda cotizar correctamente si es que se cumplen todas las condiciones.
 
-Y guala... El programa está hecho. Espero que les guste.
+Y guala... El programa está hecho. Espero que les guste. Saludos!
