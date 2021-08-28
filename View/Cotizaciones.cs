@@ -14,7 +14,15 @@ namespace QuarkIngreso.View
         public Cotizaciones()
         {
             cotizacionController = new CotizacionController();
-            cotizaciones = new List<Cotizacion>();
+            cotizaciones = cotizacionController.GetCotizaciones();
+            row = new DataGridViewRow();
+            InitializeComponent();
+        }
+
+        public Cotizaciones(List<Cotizacion> cotizaciones)
+        {
+            cotizacionController = new CotizacionController();
+            this.cotizaciones = cotizaciones;
             row = new DataGridViewRow();
             InitializeComponent();
         }
@@ -27,7 +35,6 @@ namespace QuarkIngreso.View
 
         private void Cotizaciones_Load(object sender, EventArgs e)
         {
-            cotizaciones=cotizacionController.GetCotizaciones();
             if (cotizaciones.Count > 0)
             {
                 row.CreateCells(this.tablaCotizacion);
@@ -35,7 +42,7 @@ namespace QuarkIngreso.View
                 {
                     string[] ropaDetails=cotizaciones[i].Ropa.ropaHeaders();
                     row.Cells[0].Value = cotizaciones[i].Id;
-                    row.Cells[1].Value = cotizaciones[i].Fecha;
+                    row.Cells[1].Value = cotizaciones[i].Fecha.ToString().Split(' ')[0];
                     row.Cells[2].Value = cotizaciones[i].Tienda.Nombre;
                     row.Cells[3].Value = ropaDetails[0];//nombre
                     row.Cells[4].Value = ropaDetails[1];//detalle

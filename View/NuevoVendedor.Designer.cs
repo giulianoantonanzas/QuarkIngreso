@@ -50,24 +50,24 @@ namespace QuarkIngreso.View
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(6, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(265, 134);
+            this.groupBox1.Size = new System.Drawing.Size(340, 189);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informacion";
             // 
             // nombreBox
             // 
-            this.nombreBox.Location = new System.Drawing.Point(78, 63);
+            this.nombreBox.Location = new System.Drawing.Point(78, 68);
             this.nombreBox.Name = "nombreBox";
-            this.nombreBox.Size = new System.Drawing.Size(181, 24);
+            this.nombreBox.Size = new System.Drawing.Size(255, 24);
             this.nombreBox.TabIndex = 13;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 66);
+            this.label4.Location = new System.Drawing.Point(10, 71);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 18);
             this.label4.TabIndex = 12;
@@ -75,15 +75,15 @@ namespace QuarkIngreso.View
             // 
             // apellidoBox
             // 
-            this.apellidoBox.Location = new System.Drawing.Point(78, 96);
+            this.apellidoBox.Location = new System.Drawing.Point(78, 101);
             this.apellidoBox.Name = "apellidoBox";
-            this.apellidoBox.Size = new System.Drawing.Size(181, 24);
+            this.apellidoBox.Size = new System.Drawing.Size(255, 24);
             this.apellidoBox.TabIndex = 11;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 99);
+            this.label2.Location = new System.Drawing.Point(10, 104);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 18);
             this.label2.TabIndex = 10;
@@ -93,7 +93,7 @@ namespace QuarkIngreso.View
             // 
             this.idBox.Location = new System.Drawing.Point(38, 28);
             this.idBox.Name = "idBox";
-            this.idBox.Size = new System.Drawing.Size(39, 24);
+            this.idBox.Size = new System.Drawing.Size(49, 24);
             this.idBox.TabIndex = 9;
             // 
             // label1
@@ -110,9 +110,9 @@ namespace QuarkIngreso.View
             this.Agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(43)))), ((int)(((byte)(174)))));
             this.Agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Agregar.ForeColor = System.Drawing.Color.White;
-            this.Agregar.Location = new System.Drawing.Point(12, 152);
+            this.Agregar.Location = new System.Drawing.Point(6, 207);
             this.Agregar.Name = "Agregar";
-            this.Agregar.Size = new System.Drawing.Size(265, 39);
+            this.Agregar.Size = new System.Drawing.Size(340, 39);
             this.Agregar.TabIndex = 2;
             this.Agregar.Text = "Agregar";
             this.Agregar.UseVisualStyleBackColor = false;
@@ -123,7 +123,7 @@ namespace QuarkIngreso.View
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(289, 202);
+            this.ClientSize = new System.Drawing.Size(351, 250);
             this.Controls.Add(this.Agregar);
             this.Controls.Add(this.groupBox1);
             this.Name = "NuevoVendedor";

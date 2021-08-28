@@ -1,2 +1,4 @@
 Id	Fecha	Tienda	Ropa	PrendasCotizadas	Total	
-41241	27/08/2021	1	Camisa - mangas cortas - cuello mao - standar - 3500 - 100 - 	100	324450	
+123	27/08/2021	1	Camisa - mangas cortas - cuello mao - standar - 2200 - 100 - 	100	203940	
+21	28/08/2021	3	Camisa - mangas largas - cuello mao - standar - 1000 - 75 - 	75	77250	
+123	28/08/2021	3	Panton - chupin - premium - 2300 - 100 - 	100	202400	

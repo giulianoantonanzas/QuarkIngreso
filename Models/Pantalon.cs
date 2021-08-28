@@ -48,7 +48,7 @@ namespace QuarkIngreso.Models
                 {
                     PantalonRulesActives.MaxCantidadChupinesPremium -= Stock;
                 }
-                else
+                else if(Calidad == "standar")
                 {
                     PantalonRulesActives.MaxCantidadChupinesStandar -= Stock;
                 }
@@ -60,7 +60,7 @@ namespace QuarkIngreso.Models
                 {
                     PantalonRulesActives.MaxCantidadComunesPremium -= Stock;
                 }
-                else
+                else if (Calidad == "standar")
                 {
                     PantalonRulesActives.MaxCantidadComunesStandar -= Stock;
                 }

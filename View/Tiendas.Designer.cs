@@ -36,11 +36,11 @@ namespace QuarkIngreso.View
         private void InitializeComponent()
         {
             this.tablaTiendas = new System.Windows.Forms.DataGridView();
+            this.nuevaTienda = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vendedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nuevaTienda = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tablaTiendas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,8 +57,21 @@ namespace QuarkIngreso.View
             this.tablaTiendas.Location = new System.Drawing.Point(7, 12);
             this.tablaTiendas.Name = "tablaTiendas";
             this.tablaTiendas.ReadOnly = true;
-            this.tablaTiendas.Size = new System.Drawing.Size(444, 266);
+            this.tablaTiendas.Size = new System.Drawing.Size(576, 266);
             this.tablaTiendas.TabIndex = 2;
+            // 
+            // nuevaTienda
+            // 
+            this.nuevaTienda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(43)))), ((int)(((byte)(174)))));
+            this.nuevaTienda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nuevaTienda.ForeColor = System.Drawing.Color.White;
+            this.nuevaTienda.Location = new System.Drawing.Point(7, 284);
+            this.nuevaTienda.Name = "nuevaTienda";
+            this.nuevaTienda.Size = new System.Drawing.Size(576, 39);
+            this.nuevaTienda.TabIndex = 3;
+            this.nuevaTienda.Text = "Agregar nueva tienda";
+            this.nuevaTienda.UseVisualStyleBackColor = false;
+            this.nuevaTienda.Click += new System.EventHandler(this.nuevaTienda_Click);
             // 
             // id
             // 
@@ -69,44 +82,37 @@ namespace QuarkIngreso.View
             // 
             // nombre
             // 
+            this.nombre.FillWeight = 120F;
             this.nombre.Frozen = true;
             this.nombre.HeaderText = "Nombre";
             this.nombre.Name = "nombre";
             this.nombre.ReadOnly = true;
+            this.nombre.Width = 120;
             // 
             // direccion
             // 
+            this.direccion.FillWeight = 120F;
             this.direccion.Frozen = true;
             this.direccion.HeaderText = "Direccion";
             this.direccion.Name = "direccion";
             this.direccion.ReadOnly = true;
+            this.direccion.Width = 120;
             // 
             // vendedor
             // 
+            this.vendedor.FillWeight = 200F;
             this.vendedor.Frozen = true;
             this.vendedor.HeaderText = "Vendedor";
             this.vendedor.Name = "vendedor";
             this.vendedor.ReadOnly = true;
-            // 
-            // nuevaTienda
-            // 
-            this.nuevaTienda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(43)))), ((int)(((byte)(174)))));
-            this.nuevaTienda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nuevaTienda.ForeColor = System.Drawing.Color.White;
-            this.nuevaTienda.Location = new System.Drawing.Point(7, 284);
-            this.nuevaTienda.Name = "nuevaTienda";
-            this.nuevaTienda.Size = new System.Drawing.Size(444, 39);
-            this.nuevaTienda.TabIndex = 3;
-            this.nuevaTienda.Text = "Agregar nueva tienda";
-            this.nuevaTienda.UseVisualStyleBackColor = false;
-            this.nuevaTienda.Click += new System.EventHandler(this.nuevaTienda_Click);
+            this.vendedor.Width = 200;
             // 
             // Tiendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(456, 328);
+            this.ClientSize = new System.Drawing.Size(587, 328);
             this.Controls.Add(this.nuevaTienda);
             this.Controls.Add(this.tablaTiendas);
             this.Name = "Tiendas";
@@ -121,9 +127,9 @@ namespace QuarkIngreso.View
 
         private System.Windows.Forms.DataGridView tablaTiendas;
         private System.Windows.Forms.Button nuevaTienda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vendedor;
+        private DataGridViewTextBoxColumn id;
+        private DataGridViewTextBoxColumn nombre;
+        private DataGridViewTextBoxColumn direccion;
+        private DataGridViewTextBoxColumn vendedor;
     }
 }

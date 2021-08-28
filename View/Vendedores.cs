@@ -41,5 +41,20 @@ namespace QuarkIngreso.View
                 }
             }
         }
+
+        private void verCotizacionesBTN_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                List<Cotizacion> cotizaciones = new CotizacionController().GetCotizacionsByVendedor(
+                        vendedores[tablaVendedores.CurrentCell.RowIndex]);
+                new Cotizaciones(cotizaciones).Show();
+            }
+            catch (Exception exeption)
+            {
+                MessageBox.Show("Error al abrir la cotizacion , revise si selecciono bien el vendedor " + exeption, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

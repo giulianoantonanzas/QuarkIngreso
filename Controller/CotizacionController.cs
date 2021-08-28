@@ -125,5 +125,17 @@ namespace QuarkIngreso.Controller
             }
             return ropas;
         }
+
+        public List<Cotizacion> GetCotizacionsByVendedor(Vendedor vendedor)
+        {
+            List<Cotizacion> cotizacions =new List<Cotizacion>();
+            foreach(Cotizacion cotizacion in GetCotizaciones())
+            {
+                Vendedor vendedorCotizado = cotizacion.Tienda.Vendedor;
+                if ((vendedorCotizado.Id==vendedor.Id) && (vendedorCotizado.Nombre == vendedor.Nombre) && (vendedorCotizado.Apellido == vendedor.Apellido)) cotizacions.Add(cotizacion);
+            }
+
+            return cotizacions;
+        }
     }
 }

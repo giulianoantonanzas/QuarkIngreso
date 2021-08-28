@@ -34,6 +34,7 @@ namespace QuarkIngreso.View
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.verCotizacionesBTN = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tablaVendedores)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,9 +43,9 @@ namespace QuarkIngreso.View
             this.nuevoVendedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(43)))), ((int)(((byte)(174)))));
             this.nuevoVendedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nuevoVendedor.ForeColor = System.Drawing.Color.White;
-            this.nuevoVendedor.Location = new System.Drawing.Point(12, 275);
+            this.nuevoVendedor.Location = new System.Drawing.Point(310, 275);
             this.nuevoVendedor.Name = "nuevoVendedor";
-            this.nuevoVendedor.Size = new System.Drawing.Size(342, 39);
+            this.nuevoVendedor.Size = new System.Drawing.Size(236, 39);
             this.nuevoVendedor.TabIndex = 5;
             this.nuevoVendedor.Text = "Agregar nueva vendedor";
             this.nuevoVendedor.UseVisualStyleBackColor = false;
@@ -59,10 +60,10 @@ namespace QuarkIngreso.View
             this.id,
             this.nombre,
             this.apellido});
-            this.tablaVendedores.Location = new System.Drawing.Point(12, 12);
+            this.tablaVendedores.Location = new System.Drawing.Point(6, 12);
             this.tablaVendedores.Name = "tablaVendedores";
             this.tablaVendedores.ReadOnly = true;
-            this.tablaVendedores.Size = new System.Drawing.Size(342, 257);
+            this.tablaVendedores.Size = new System.Drawing.Size(540, 257);
             this.tablaVendedores.TabIndex = 4;
             // 
             // id
@@ -74,24 +75,42 @@ namespace QuarkIngreso.View
             // 
             // nombre
             // 
+            this.nombre.FillWeight = 200F;
             this.nombre.Frozen = true;
             this.nombre.HeaderText = "Nombre";
             this.nombre.Name = "nombre";
             this.nombre.ReadOnly = true;
+            this.nombre.Width = 200;
             // 
             // apellido
             // 
+            this.apellido.FillWeight = 200F;
             this.apellido.Frozen = true;
             this.apellido.HeaderText = "Apellido";
             this.apellido.Name = "apellido";
             this.apellido.ReadOnly = true;
+            this.apellido.Width = 200;
+            // 
+            // verCotizacionesBTN
+            // 
+            this.verCotizacionesBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(43)))), ((int)(((byte)(174)))));
+            this.verCotizacionesBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.verCotizacionesBTN.ForeColor = System.Drawing.Color.White;
+            this.verCotizacionesBTN.Location = new System.Drawing.Point(6, 275);
+            this.verCotizacionesBTN.Name = "verCotizacionesBTN";
+            this.verCotizacionesBTN.Size = new System.Drawing.Size(298, 39);
+            this.verCotizacionesBTN.TabIndex = 6;
+            this.verCotizacionesBTN.Text = "Ver Cotizaciones";
+            this.verCotizacionesBTN.UseVisualStyleBackColor = false;
+            this.verCotizacionesBTN.Click += new System.EventHandler(this.verCotizacionesBTN_Click);
             // 
             // Vendedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(363, 324);
+            this.ClientSize = new System.Drawing.Size(552, 319);
+            this.Controls.Add(this.verCotizacionesBTN);
             this.Controls.Add(this.nuevoVendedor);
             this.Controls.Add(this.tablaVendedores);
             this.Name = "Vendedores";
@@ -109,5 +128,6 @@ namespace QuarkIngreso.View
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
+        private System.Windows.Forms.Button verCotizacionesBTN;
     }
 }

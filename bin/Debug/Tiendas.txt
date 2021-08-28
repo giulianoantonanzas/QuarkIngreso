@@ -1,2 +1,3 @@
 Id	Nombre	Direccion	Vendedor	
-1	Tienda Los Negros	Centenario 1167	1	
+1	Tienda Los Negros	Centenario 1167	1		
+3	Addidas	San Martin 2222	12	
